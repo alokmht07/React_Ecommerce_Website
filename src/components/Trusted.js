@@ -9,12 +9,6 @@ const Trusted = () => {
           {/* my 1st img  */}
           <div className="slide">
             <img
-              src="https://i.pinimg.com/originals/80/11/a5/8011a542756bc3ea49dc36a36f6543eb.png"
-              alt="trusted-brands"
-            />
-          </div>
-          <div className="slide">
-            <img
               src="https://www.freepnglogos.com/uploads/company-logo-png/company-logo-transparent-png-19.png"
               alt="trusted-brands"
             />
@@ -27,13 +21,7 @@ const Trusted = () => {
           </div>
           <div className="slide">
             <img
-              src="https://assets.stickpng.com/images/5cb480b85f1b6d3fbadece78.png"
-              alt="trusted-brands"
-            />
-          </div>
-          <div className="slide">
-            <img
-              src="https://image.similarpng.com/very-thumbnail/2021/05/Logo-design-illustration-on-transparent-background-PNG.png"
+              src="https://hindubabynames.info/wp-content/themes/hbn_download/download/logistics-companies/zepto-logo.png"
               alt="trusted-brands"
             />
           </div>
