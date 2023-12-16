@@ -122,6 +122,9 @@ const Wrapper = styled.section`
         padding: 1rem;
         border-radius: 50%;
         border: 2px solid ${({ theme }) => theme.colors.white};
+        &:hover {
+          background-color: rgb(98 84 243);
+        }
 
         .icons {
           color: ${({ theme }) => theme.colors.white};

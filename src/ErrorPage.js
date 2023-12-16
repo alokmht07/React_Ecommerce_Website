@@ -7,16 +7,12 @@ const ErrorPage = () => {
     <Wrapper>
       <div className="container">
         <div>
-          <h2>404</h2>
-          <h3>UH OH! You're lost.</h3>
-          <p>
-            The page you are looking for does not exist. How you got here is a
-            mystery. But you can click the button below to go back to the
-            homepage.
-          </p>
+          <img src="./images/404-error.svg" alt="error" />
+          <h2>We couldn't find the page you were looking for</h2>
+          <p>Please ensure you have the correct URL or return to homepage.</p>
 
           <NavLink to="/">
-            <Button>Go Back to Home</Button>
+            <Button>HomePage</Button>
           </NavLink>
         </div>
       </div>
@@ -26,15 +22,15 @@ const ErrorPage = () => {
 
 const Wrapper = styled.section`
   .container {
-    padding: 9rem 0;
+    padding: 5rem 0;
     text-align: center;
 
-    h2 {
-      font-size: 10rem;
+    img {
+      height: 35rem;
     }
 
-    h3 {
-      font-size: 4.2rem;
+    h2 {
+      font-size: 2.5rem;
     }
 
     p {
