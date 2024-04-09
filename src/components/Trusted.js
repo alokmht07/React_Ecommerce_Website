@@ -15,19 +15,31 @@ const Trusted = () => {
           </div>
           <div className="slide">
             <img
-              src="https://hindubabynames.info/wp-content/themes/hbn_download/download/logistics-companies/zepto-logo.png"
+              src="https://www.freepnglogos.com/uploads/company-logo-png/company-logo-transparent-png-19.png"
               alt="trusted-brands"
             />
           </div>
           <div className="slide">
             <img
-              src="https://hindubabynames.info/wp-content/themes/hbn_download/download/logistics-companies/zepto-logo.png"
+              src="https://www.freepnglogos.com/uploads/company-logo-png/company-logo-transparent-png-19.png"
               alt="trusted-brands"
             />
           </div>
           <div className="slide">
             <img
-              src="https://branditechture.agency/brand-logos/wp-content/uploads/wpdm-cache/Next.js-900x0.png"
+              src="https://www.freepnglogos.com/uploads/company-logo-png/company-logo-transparent-png-19.png"
+              alt="trusted-brands"
+            />
+          </div>
+          <div className="slide">
+            <img
+              src="https://www.freepnglogos.com/uploads/company-logo-png/company-logo-transparent-png-19.png"
+              alt="trusted-brands"
+            />
+          </div>
+          <div className="slide">
+            <img
+              src="https://www.freepnglogos.com/uploads/company-logo-png/company-logo-transparent-png-19.png"
               alt="trusted-brands"
             />
           </div>

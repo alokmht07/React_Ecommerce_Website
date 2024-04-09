@@ -3,9 +3,14 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { FiShoppingCart } from "react-icons/fi";
 import { CgMenu, CgClose } from "react-icons/cg";
+import { useCartContext } from "../context/cart_context";
+import { useAuth0 } from "@auth0/auth0-react";
+import { Button } from "../styles/Button";
 
 const Nav = () => {
   const [menuIcon, setMenuIcon] = useState();
+  const { total_item } = useCartContext();
+  const { loginWithRedirect, logout, isAuthenticated, user } = useAuth0();
 
   const Nav = styled.nav`
     .navbar-lists {
@@ -79,6 +84,19 @@ const Nav = () => {
       font-size: 1.4rem;
       padding: 0.8rem 1.4rem;
     }
+
+    .user-profile {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.2rem;
+
+    img {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+    }
+  }
 
     @media (max-width: ${({ theme }) => theme.media.mobile}) {
       .mobile-navbar-btn {
@@ -158,6 +176,12 @@ const Nav = () => {
         font-size: 2.2rem;
         padding: 0.8rem 1.4rem;
       }
+
+      .user-profile img {
+          width: 8rem;
+          height: 8rem;
+          border-radius: 50%;
+      }
     }
   `;
 
@@ -197,10 +221,26 @@ const Nav = () => {
               Contact
             </NavLink>
           </li>
+
+          {isAuthenticated && <div className="user-profile"> <img src={user.picture} alt={user.name} /> </div>}
+
+          {isAuthenticated ? (
+            <li>
+              <Button
+                onClick={() => logout({ returnTo: window.location.origin })}>
+                Log Out
+              </Button>
+            </li>
+          ) : (
+            <li>
+              <Button onClick={() => loginWithRedirect()}>Log In</Button>
+            </li>
+          )}
+
           <li>
             <NavLink to="/cart" className="navbar-link cart-trolley--link">
               <FiShoppingCart className="cart-trolley" />
-              <span className="cart-total--item"> 10 </span>
+              <span className="cart-total--item"> {total_item} </span>
             </NavLink>
           </li>
         </ul>
@@ -223,4 +263,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default Nav; 
